@@ -1,0 +1,24 @@
+.box{
+    
+ width:250px;
+     height: 250px;
+     border: 5px solid;
+     font-size: 13em;
+     text-align: center;
+     transform: translateX(100px) rotatez(45deg) scale(.5);
+}
+#box1{
+    background-color: hsl(113, 87%, 50%);
+}   
+#box2{
+    background-color: hsl(63, 93%, 47%);
+}   
+#box3{
+    background-color: hsl(350, 87%, 50%);
+}   
+
+
+     /* transform: rotateX('angle');
+     transform: rotateY('angle');
+     transform:translate();
+     transform:rotateX('angle') */

@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: #ef0b31;
+    font-size: 13em;
+    text-align: center;
+    animation-name:glow;
+    animation-duration: 2s;
+    animation-iteration-count:4;
+    animation-direction: reverse;
+    animation-play-state: paused;
+}
+
+
+@keyframes slideleft{
+    from{transform: translateX(300px)}
+}
+@keyframes slideright{
+    to{transform: translateX(300px)}
+}
+
+@keyframes slideUp{
+    from{transform: translateY(300px)}
+}
+@keyframes slideDown{
+    to{transform: translateY(300px)}
+}
+@keyframes rotate{
+    50%{transform: rotateY(360deg);}
+}
+@keyframes grow{
+    100%{transform: scale(2,2)}
+}
+@keyframes shrink{
+    100%{transform: scale(.5,.5)}
+}
+@keyframes fade{
+    50%{opacity: 0}
+}
+
+@keyframes fadein{
+
+}
+@keyframes colorChange{
+    
+}
+@keyframes glow{
+    50%{box-shadow: 0px 0px 50px yellow;}
+}

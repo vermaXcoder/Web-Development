@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        nav a {
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <a onclick="show('home')">Home</a>
+    <a onclick="show('about')">About</a>
+    <a onclick="show('contact')">Contact</a>
+    <a onclick="show('register')">Registration</a>
+</nav>
+
+<!-- Home Page -->
+<div id="home" class="section">
+    <h2>Homepage</h2>
+    <p id="result"></p>
+</div>
+
+<!-- About Page -->
+<div id="about" class="section">
+    <h2>About</h2>
+    <p>This is a simple website.</p>
+</div>
+
+<!-- Contact Page -->
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: example@gmail.com</p>
+</div>
+
+<!-- Registration Page -->
+<div id="register" class="section">
+    <h2>Registration Form</h2>
+
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="email" id="email"><br><br>
+    Phone: <input type="number" id="phone"><br><br>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+    function show(id) {
+        let sections = document.getElementsByClassName("section");
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].style.display = "none";
+        }
+        document.getElementById(id).style.display = "block";
+    }
+
+    function submitForm() {
+        if (confirm("Are you sure you want to submit?")) {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+
+            console.log("Your form has been successfully submitted");
+
+            document.getElementById("result").innerHTML =
+                "Name: " + name + "<br>Email: " + email + "<br>Phone: " + phone;
+
+            show("home");
+        }
+    }
+
+    // Default page
+    show("home");
+</script>
+
+</body>
+</html>

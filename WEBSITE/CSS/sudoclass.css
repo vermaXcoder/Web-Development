@@ -1,0 +1,37 @@
+/* a{
+ color: black;
+}
+a:hover{
+    color: red;
+    font-size: 1.1em;
+}
+a:active{
+    color: MAGENTA;
+}
+a:visited{
+    color:aqua;
+} */
+
+/* li:hover{
+    color: goldenrod;
+}
+li:not(:hover){
+    background-color: blue;
+}
+
+li:nth-child(3n+1){
+    background-color:grey;
+} */
+
+
+
+
+#Greeting p{
+    background-color:greenyellow;
+    padding: 5px;
+    display: none;
+}
+
+#Greeting:hover p{
+    display: block;
+}

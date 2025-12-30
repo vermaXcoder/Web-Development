@@ -1,0 +1,30 @@
+body{
+
+    margin: 0px;
+}
+h1{
+   text-shadow: 3px 3px 5px red,-3px -3px 5px rgb(0, 255, 60);
+   font-size: 4em;
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    box-shadow: 3px 3px 5px;
+}
+.box{
+
+    border: 5px solid;
+    font-size:5em ;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-color: yellow;
+
+}
+#box2{
+    background-color: pink;
+   
+}
+
+#box3

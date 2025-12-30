@@ -1,0 +1,42 @@
+
+h1::first-letter{
+font-size: 2em;
+font-style: italic;
+}
+
+p::first-line{
+    background-color:yellow;
+}
+p::selection{
+    color: greenyellow;
+    background-color:green;
+}
+
+#fruits li::before{
+    
+}
+#banana::after{
+    content: "🍌";
+}
+#apple::after{
+    content: "🍎";
+}
+#orange::after{
+    content: "🍊";
+}
+#fruits li::marker{
+    content: "✔️";
+    color: rgb(27, 236, 27);
+
+font-size: 1.2em;
+}
+
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color:black;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: inline-block;
+}
