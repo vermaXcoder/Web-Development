@@ -55,3 +55,31 @@ console.log(typeof funciton)
   
   Object (host and does not implement[[Call]])= implementation - defined except may not be "undefined","boolean","number", or "string".
 */
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//MEMORY--------------------
+
+//Stack (Primitive)=we get a copy here , 
+// Heap(Non-Primitive)= we get a reference 
+
+
+let myYoutubename= "VermaXcoder"
+anothername= "anothercoder"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne={
+    email: "user@google.com",
+    upi: " usere@ybl"
+}
+
+let userTwo= userOne
+
+userTwo.email= "Rishabh@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email)
