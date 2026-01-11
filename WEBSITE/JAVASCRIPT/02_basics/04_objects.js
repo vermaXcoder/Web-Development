@@ -47,11 +47,46 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 
-console.log(tinderUser.hasOwnProperty ('isLogged'));
+// console.log(tinderUser.hasOwnProperty ('isLogged'));
+
+
+
+
+
+//DESTRUCTURING OF THE OBJECTS
+const course = {
+    coursename:"Js in Hindi",
+    price: "999",
+    courseInstructor: "Rishabh"
+}
+//   course.courseInstructor
+
+const {courseInstructor: instructor}= course
+
+console.log(instructor);
+
+
+
+/* jb bhi apna kaam  kisi aur ke sir pr dal dena hai usi ko APIs kehte hai 😂😂😂
+
+ // APIs is like , kuch values aati hai backend se , us values ko aap kaise likhte hai 
+  pehle xml ke form  me aati thi values ab kaise aati hai json(JavaScript object notation) me 
+
+
+
+ */
+
+
+//   {
+//     "name":"Rishabh ",
+//     "coursename": "js in hindi",
+//     "price": "free"
+    
+//   }
