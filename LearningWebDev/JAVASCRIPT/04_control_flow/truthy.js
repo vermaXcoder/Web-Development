@@ -38,10 +38,10 @@ if (Object.keys(emptyObj).length===0){
 //Nullish Coalencing Opereator (??): null undefined
 
 let val1;
-val1= 5?? 10
-val1= null ?? 10;
-val1= undefined ?? 10?? 20
-val1 = null ?? 10 ?? 20
+val1= 5?? 10 // 5
+val1= null ?? 10; // 10
+val1= undefined ?? 10?? 20  // 10
+val1 = null ?? 10 ?? 20 // 10
 
 console.log(val1);
 
