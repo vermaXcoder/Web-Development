@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=" background-color: #212121; color:  #fff">
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+       const requestUrl= 'https://api.github.com/users/vermaXcoder'
+       const xhr= new XMLHttpRequest() // * keh sakte hai ki ye ek class hai to isse  object bnana padta hai 
+     //new keyword use krte hai taki hum ek fresh keyword bna rahe hai usse
+      xhr.open('GET', requestUrl)// jaise hi dot likhenge sire methods mil jayenge 
+      xhr.onreadystatechange= function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState===4){
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+            ///
+        } // jb only response text likhte hai to koi response nahi aata  hai ,usko pta kaise chalega ki ise response ki baat kr rahe ho ,  is liye  this. lagana padta  hai  response text ke aage 
+
+      }// ye continuously  track krne ke 
+      // aur hai ye  onreadystatechange ye sub subsriber models jo aage jake  work kroge  jaise firebase ya appright ke ander 
+
+       // jb bhi aap current context ki baat kr rahe hote hai to usi context pe this lagaya jata hai  
+
+      // abhi 1 print , not every time  one print ho rahi 
+      // jb bhi response aata hai  url me wo  string me hi  aata hai mostly
+
+      xhr.send() // *Actually me  open apne aap me call nahi hota hai  , bolna padta hai xhr.send ()
+
+</script>
+</html>
